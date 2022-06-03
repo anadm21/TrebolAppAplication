@@ -1,0 +1,18 @@
+#Nombre de la aplicación
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 1234 #Puerto por el que se puede acceder
+
+eureka:
+  client:
+    #Indicación de que el propio servidor no se auto-registre (el resto de microservicios si)
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      #URL por defecto para acceder al servidor de Eureka
+      defaultZone: http://localhost:1234/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0    #Tiempo que tarda en sincronizar al arrancar
