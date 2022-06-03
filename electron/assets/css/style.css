@@ -1,0 +1,242 @@
+.table-responsive {
+	padding: 20px 150px 20px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.filascolumnas tr,th,td {
+	border: solid 2px black;
+	border-right: solid 2px black;
+}
+
+.edit-div {
+	padding: 20px 150px 20px;
+	text-align: center;
+}
+
+.tablalogin {
+	padding: 40px 200px 40px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.tablalogin img {
+	width: 180px;
+	height: 180px;
+}
+
+.delete-div {
+	padding: 20px 150px 20px;
+	text-align: center;
+}
+
+.delete-div td, tr{
+	padding-left: 20px;
+}
+
+.edit-div td, tr{
+	padding-left: 20px;
+}
+
+.delete-div table,tr,td,th {
+	margin: 0 auto;
+}
+
+.edit-div table,tr,td,th {
+	margin: 0 auto;
+}
+
+.menu {
+	text-align: right;
+	padding-top: -30px;
+	padding-right: 170px;
+}
+
+
+.tablaedit table,tr,td,th {
+	border: none;
+}
+
+.cabecera {
+	padding-top: 120px;
+}
+
+.cabeceralogin {
+	padding-top: 300px;
+}
+
+.cabeceralogin img {
+	height: 200px;
+	padding:30px 600px 30px;
+}
+
+th {
+	width:200px;
+	font-size: 18px;
+	padding-right:10px;
+	text-align: center;
+}
+
+td {
+	line-height: 3rem;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1,h2,h3,h4,h5 {
+    color: #26292c;
+}
+
+h3 {
+	font-size: 25px;
+	text-align: center;
+}
+
+.btn {
+    line-height: 45px;
+    min-width: 150px;
+    min-height: 45px;
+    font-size: 16px;
+    font-weight: 300;
+    border: 0;
+    border-radius: 20px;
+    color: #26272d;
+    background-color: #E5E8E8;
+    padding: 0;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.btnanadir {
+	line-height: 45px;
+    min-width: 150px;
+    min-height: 45px;
+    font-size: 16px;
+    font-weight: 300;
+    border: 0;
+    border-radius: 20px;
+    color: #26272d;
+    background-color: #E5E8E8;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left:5px;
+}
+
+.btn:hover,
+button.btn:hover,
+.btn:focus,
+button.btn:focus {
+    background-color: #26272d;
+    color: #fff;
+}
+
+/* Radiobutton fields */
+.radio-btn label {
+    font-weight: 400;
+}
+
+.radio-btn [type="radio"]:not(:checked) + label,
+.radio-btn [type="radio"]:checked + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+/* LAYOUT
+================================================== */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../img/fondo.jpg");
+}
+
+/* HEADER
+================================================== */
+.site-header {
+    position: absolute;
+    padding: 50px 50px 50px;
+    background-color: transparent;
+    width: 100%;
+    z-index: 3;
+}
+
+.site-title {
+    font-size: 22px;
+    line-height: 26px;
+    color: #26272d;
+}
+
+.site-title:hover {
+    color: #26272d;   
+}
+
+.site-title span {
+    font-weight: 700;
+}
+
+.site-title a:hover {
+    color: #fff;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-nav {
+    float: none;
+    display: inline-block;
+}
+
+.navbar-nav > li > a {
+    padding: 0;
+    font-size: 18px;
+    position: relative;
+    color: #26272d;
+    line-height: 26px;
+}
+
+.navbar-nav > li > a i {
+    margin-left: 5px;
+}
+
+.navbar-nav > li + li {
+    margin-left: 30px;
+}
+
+.nav .open > a, 
+.nav .open > a:focus, 
+.nav .open > a:hover,
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-nav > li.active > a,
+.navbar-collapse li a:hover,
+.dropdown.open > a, 
+.site-header-white .dropdown.open > a,
+.dropdown-menu a:hover, 
+.dropdown:hover > a, 
+.dropdown-menu>li>a:focus,
+.dropdown-menu li a:hover,
+.slicknav_nav > li.active a,
+.slicknav_open .slicknav_arrow,
+.slicknav_nav > li a:hover {
+    background-color: transparent;
+    color: #6fc754;
+}

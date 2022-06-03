@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Fundaci&oacute;n Tr&eacute;bol - Voluntarios</title>
+<meta name="description"
+	content="Página de gestión de beneficiarios de Trébol App">
+<meta name="author" content="Ana Díaz Muñoz">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700"
+	rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header class="site-header">
+		<nav>
+			<div>
+				<div>
+					<a class="site-title"><span>Fundaci&oacute;n</span>Tr&eacute;bol</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="listv.html">Voluntarios</a></li>
+						<li><a href="listp.html">Socios</a></li>
+						<li><a href="listw.html">Trabajadores</a></li>
+						<li><a href="listb.html">Beneficiarios</a></li>
+						<li><a href="index.html">Salir</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="cabecera">
+		<h2>Nuestros Beneficiarios</h2>
+	</div>
+	<div class="menu">
+		<button type="button" class="btnanadir" id="btnanadir">Añadir
+			Beneficiario</button>
+		<button type="button" class="btnanadir" id="btnedit">Editar/Eliminar
+			Beneficiario</button>
+		<button type="button" class="btnanadir" id="btnfind">Buscar
+			Beneficiario</button>
+	</div>
+	<div class="table-responsive filascolumnas">
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">DNI</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellidos</th>
+					<th scope="col">Edad</th>
+					<th scope="col">Fecha de Nacimiento</th>
+					<th scope="col">Fecha de Antigüedad</th>
+					<th scope="col">Dirección</th>
+					<th scope="col">Teléfono</th>
+				</tr>
+			</thead>
+			<tbody id="tablabeneficiarios">
+				<tr>
+					<th scope="row" colspan="5"></th>
+				</tr>
+		</table>
+	</div>
+	<div class="delete-div" id="delete-div" style="display: none">
+		<table>
+			<tr>
+				<td><h3>Introduzca el DNI del beneficiario</h3></td>
+				<td><input type="text" id="textdni" /></td>
+				<td><button type="button" class="btn" id="btneditar">Editar</button></td>
+				<td><button type="button" class="btn" id="btneliminar">Eliminar</button></td>
+			</tr>
+		</table>
+	</div>
+	<div class="edit-div" id="edit-div" style="display: none">
+		<table>
+			<tr>
+				<td><h3>Introduzca los datos del beneficiario</h3></td>
+			</tr>
+			<tr>
+				<table>
+					<tr>
+						<td><label>DNI</label></td>
+						<td><label>Nombre</label></td>
+						<td><label>Apellidos</label></td>
+						<td><label>Edad</label></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="txtdni" placeholder="DNI" /></td>
+						<td><input type="text" id="txtnom" placeholder="Nombre" /></td>
+						<td><input type="text" id="txtape" placeholder="Apellidos" /></td>
+						<td><input type="text" id="txtedad" placeholder="Edad" /></td>
+					</tr>
+				</table>
+			</tr>
+			<tr>
+				<table>
+					<tr>
+						<td><label>Fecha de Nacimiento</label></td>
+						<td><label>Fecha de Antigüedad</label></td>
+						<td><label>Dirección</label></td>
+						<td><label>Teléfono</label></td>
+					</tr>
+					<tr>
+						<td><input type="date" id="txtfnac" style="width:180px"/></td>
+						<td><input type="date" id="txtfant" style="width:180px"/></td>
+						<td><input type="text" id="txtdir" placeholder="Dirección" /></td>
+						<td><input type="text" id="txttlf" placeholder="Teléfono" /></td>
+					</tr>
+				</table>
+			</tr>
+			<tr>
+				<td><button type="button" class="btn" id="btnaceptar">Aceptar</button></td>
+			</tr>
+		</table>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+	<script src="mainbeneficiaries.js"></script>
+</body>
+</html>
