@@ -24,6 +24,7 @@ class TrebolAppSocioTests {
 		assertNotNull(src);
 	}
 
+	//Test de adición de socio
 	@Test
 	public void addTest() {
 		s.setDNISocio("05554789-A");
@@ -39,6 +40,7 @@ class TrebolAppSocioTests {
 		assertNotNull(src.find("05554789-A"));
 	}
 	
+	//Test de edición de socio
 	@Test
 	public void updateTest() {
 		if (src.find(s.getDNISocio())!=null) {
@@ -56,15 +58,16 @@ class TrebolAppSocioTests {
 		assertNotEquals("2002-04-12",s.getFecha_nac());
 	}
 
+	//Test de listado de socios
 	@Test
 	public void getAllTest() {
 		assertNotNull(src.getAll());
 	}
 
+	//Test de eliminación de socio
 	@Test
 	public void deleteTest() {
 		src.deleteByDNI("05554789-A");
 		assertNull(src.find("05554789-A"));
 	}
-
 }

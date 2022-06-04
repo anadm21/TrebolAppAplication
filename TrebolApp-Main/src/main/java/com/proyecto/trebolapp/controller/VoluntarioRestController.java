@@ -23,16 +23,19 @@ public class VoluntarioRestController {
 	@Autowired
 	private VoluntarioService voluntarioService;
 
+	//Peticion GET para obtener un listado de todos los voluntarios
 	@GetMapping(value = "/volunteers/all")
 	public List<Voluntario> getAll() {
 		return voluntarioService.getAll();
 	}
 	
+	//Peticion GET para localizar a un voluntario por DNI
 	@GetMapping(value = "/volunteers/find/{dni}")
 	public Voluntario find(@PathVariable String dni) {
 		return voluntarioService.findByDNI(dni);
 	}
 	
+	//Peticion POST para añadir/editar voluntarios
 	@PostMapping(value = "/volunteers/save")
 	public void save(@RequestBody @Valid Voluntario voluntario) {
 		Voluntario voriginal = voluntarioService.findByDNI(voluntario.getDNIVoluntario());
@@ -52,6 +55,7 @@ public class VoluntarioRestController {
 		}
 	}
 	
+	//Peticion DELETE para eliminar voluntarios por DNI
 	@DeleteMapping(value = "/volunteers/delete/{dni}")
 	public void deleteByDNI(@PathVariable String dni) {
 		Voluntario voluntario = voluntarioService.findByDNI(dni);

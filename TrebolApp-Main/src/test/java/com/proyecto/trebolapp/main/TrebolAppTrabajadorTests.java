@@ -24,6 +24,7 @@ class TrebolAppTrabajadorTests {
 		assertNotNull(trc);
 	}
 	
+	//Test de adición de trabajador
 	@Test
 	public void addTest() {
 		t.setDNITrabajador("05554789-A");
@@ -43,6 +44,7 @@ class TrebolAppTrabajadorTests {
 		assertNotNull(trc.find("05554789-A"));
 	}
 	
+	//Test de edición de trabajador
 	@Test
 	public void updateTest() {
 		if (trc.find(t.getDNITrabajador())!=null) {
@@ -64,12 +66,13 @@ class TrebolAppTrabajadorTests {
 		assertNotEquals("2018-04-12",t.getFecha_nac());
 	}
 
-
+	//Test de listado de trabajadores
 	@Test
 	public void getAllTest() {
 		assertNotNull(trc.getAll());
 	}
 
+	//Test de eliminación de trabajador
 	@Test
 	public void deleteTest() {
 		trc.deleteByDNI("05554789-A");

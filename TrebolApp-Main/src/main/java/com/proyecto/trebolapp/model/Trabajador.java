@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 @Entity
 @Table(name="trabajador")
 public class Trabajador {
@@ -42,12 +40,10 @@ public class Trabajador {
 	
 	@Column(name="Fecha_nac")
 	@NotNull(message = "La fecha de nacimiento no puede ser nula")
-	@JsonFormat(pattern="dd-MM-yyyy")
 	private String fecha_nac;
 	
 	@Column(name="Fecha_antiguedad")
 	@NotNull(message = "La fecha de antigüedad no puede ser nula")
-	@JsonFormat(pattern="dd-MM-yyyy")
 	private String fecha_ant;
 	
 	@Column(name="Turno")

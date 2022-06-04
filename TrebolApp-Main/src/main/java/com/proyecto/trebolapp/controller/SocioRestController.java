@@ -23,16 +23,19 @@ public class SocioRestController {
 	@Autowired
 	private SocioService socioService;
 
+	//Peticion GET para obtener la lista de todos los socios
 	@GetMapping(value = "/partners/all")
 	public List<Socio> getAll() {
 		return socioService.getAll();
 	}
 	
+	//Peticion GET para obtener los datos del socio por DNI
 	@GetMapping(value = "/partners/find/{dni}")
 	public Socio find(@PathVariable String dni) {
 		return socioService.findByDNI(dni);
 	}
 	
+	//Peticion POST para editar/añadir socios
 	@PostMapping(value = "/partners/save")
 	public void save(@RequestBody @Valid Socio socio) {
 		Socio soriginal = socioService.findByDNI(socio.getDNISocio());
@@ -51,7 +54,8 @@ public class SocioRestController {
 			socioService.save(socio);
 		}
 	}
-	
+
+	//Peticion DELETE para eliminar socios	
 	@DeleteMapping(value = "/partners/delete/{dni}")
 	public void deleteByDNI(@PathVariable String dni) {
 		Socio socio = socioService.findByDNI(dni);

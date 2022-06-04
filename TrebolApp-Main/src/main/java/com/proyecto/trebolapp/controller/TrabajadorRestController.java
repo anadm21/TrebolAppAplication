@@ -23,16 +23,19 @@ public class TrabajadorRestController {
 	@Autowired
 	private TrabajadorService trabajadorService;
 
+	//Peticion GET para listar todos los trabajadores
 	@GetMapping(value = "/workers/all")
 	public List<Trabajador> getAll() {
 		return trabajadorService.getAll();
 	}
 
+	//Peticion GET para localizar a un trabajador por DNI
 	@GetMapping(value = "/workers/find/{dni}")
 	public Trabajador find(@PathVariable String dni) {
 		return trabajadorService.findByDNI(dni);
 	}
 
+	//Peticion POST para añadir/editar trabajadores
 	@PostMapping(value = "/workers/save")
 	public void save(@RequestBody @Valid Trabajador trabajador) {
 		Trabajador toriginal = trabajadorService.findByDNI(trabajador.getDNITrabajador());
@@ -56,6 +59,7 @@ public class TrabajadorRestController {
 		}
 	}
 
+	//Peticion DELETE para eliminar trabajadores por DNI
 	@DeleteMapping(value = "/workers/delete/{dni}")
 	public void deleteByDNI(@PathVariable String dni) {
 		Trabajador trabajador = trabajadorService.findByDNI(dni);
@@ -63,5 +67,4 @@ public class TrabajadorRestController {
 			trabajadorService.deleteByDNI(dni);
 		}
 	}
-
 }

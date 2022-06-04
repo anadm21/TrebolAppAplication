@@ -23,16 +23,19 @@ public class BeneficiarioRestController {
 	@Autowired
 	private BeneficiarioService beneficiarioService;
 
+	//Petición GET para obtener la lista de beneficiarios
 	@GetMapping(value = "/beneficiaries/all")
 	public List<Beneficiario> getAll() {
 		return beneficiarioService.getAll();
 	}
 
+	//Petición GET para filtrar beneficiarios por DNI
 	@GetMapping(value = "/beneficiaries/find/{dni}")
 	public Beneficiario find(@PathVariable String dni) {
 		return beneficiarioService.findByDNI(dni);
 	}
 
+	//Petición POST para añadir/editar beneficiarios
 	@PostMapping(value = "/beneficiaries/save")
 	public void save(@RequestBody @Valid Beneficiario beneficiario) {
 		Beneficiario boriginal = beneficiarioService.findByDNI(beneficiario.getDNIBeneficiario());
@@ -52,6 +55,7 @@ public class BeneficiarioRestController {
 		}
 	}
 
+	//Peticion DELETE para eliminar beneficiarios por DNI
 	@DeleteMapping(value = "/beneficiaries/delete/{dni}")
 	public void deleteByDNI(@PathVariable String dni) {
 		Beneficiario beneficiario = beneficiarioService.findByDNI(dni);

@@ -23,6 +23,7 @@ class TrebolAppVoluntarioTests {
 		assertNotNull(vrc);
 	}
 
+	//Test de adición de voluntario
 	@Test
 	public void addTest() {
 		v.setDNIVoluntario("05554789-A");
@@ -38,6 +39,7 @@ class TrebolAppVoluntarioTests {
 		assertNotEquals(vrc.find("05554789-A"),null);
 	}
 	
+	//Test de edición de voluntario
 	@Test
 	public void updateTest() {
 		if (vrc.find(v.getDNIVoluntario())!=null) {
@@ -55,11 +57,13 @@ class TrebolAppVoluntarioTests {
 		assertNotEquals("2018-04-12",v.getFecha_nac());
 	}
 
+	//Test de listado de voluntarios
 	@Test
 	public void getAllTest() {
 		assertNotNull(vrc.getAll());
 	}
 
+	//Test de eliminación de voluntarios
 	@Test
 	public void deleteTest() {
 		vrc.deleteByDNI("05554789-A");
