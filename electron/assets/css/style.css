@@ -52,6 +52,9 @@
 	padding-right: 170px;
 }
 
+.menu button {
+    font-weight: bold;
+}
 
 .tablaedit table,tr,td,th {
 	border: none;
@@ -101,7 +104,7 @@ h3 {
     min-width: 150px;
     min-height: 45px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: bold;
     border: 0;
     border-radius: 20px;
     color: #26272d;
@@ -211,6 +214,7 @@ html, body {
     position: relative;
     color: #26272d;
     line-height: 26px;
+    font-weight: bold;
 }
 
 .navbar-nav > li > a i {
