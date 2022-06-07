@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
+const child_process = require('child_process')
 const cors = require('cors')
 var express = require('express')
 
@@ -19,6 +20,9 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  mainWindow.onbeforeunload=(e)=>{
+	child_process.exec('..\mataprocesos.bat')
+  }
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -54,3 +58,5 @@ app2.get('/api', function (req, res, next) {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+	

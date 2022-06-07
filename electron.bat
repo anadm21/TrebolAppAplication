@@ -1,2 +1,2 @@
-cd .\electron-quick-start
+cd electron
 npm start
